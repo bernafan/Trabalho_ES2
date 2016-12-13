@@ -3,17 +3,16 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package trabalho_es2.model;
+package model;
 
 /**
  *
  * @author Bernardo
  */
 public class Material {
-    String nome;
-    String descricao;
-    double valorUnitario;
-    double valorVenda;
+    private String nome;
+    private String descricao;
+    private double valorUnitario;
 
     public String getNome() {
         return nome;
@@ -38,14 +37,10 @@ public class Material {
     public void setValorUnitario(double valorUnitario) {
         this.valorUnitario = valorUnitario;
     }
-
-    public double getValorVenda() {
-        return valorVenda;
-    }
-
-    public void setValorVenda(double valorVenda) {
-        this.valorVenda = valorVenda;
-    }
     
-    
+    public String toString() {
+        String texto = "Nome: " + getNome() + "\nDescrição: " + getDescricao() + "\nValor: " + getValorUnitario();
+        texto += "\n-----------------------------";
+        return texto;
+    }
 }
